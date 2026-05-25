@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">SADT</div>
+
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="calendar.html">Calendar</a></li>
+            <li><a href="completed.html">Completed</a></li>
+            <li><a href="groups.html">Groups</a></li>
+            <li><a href="#" onclick="logout()">Logout</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <section class="hero">
+            <h1>Assignment Dashboard</h1>
+            <p>Track deadlines, stay organised, and reduce stress.</p>
+        </section>
+
+        <section class="stats">
+
+            <div class="card">
+                <h2 id="totalAssignments">0</h2>
+                <p>Total Assignments</p>
+            </div>
+
+            <div class="card upcoming">
+                <h2 id="upcomingAssignments">0</h2>
+                <p>Upcoming</p>
+            </div>
+
+            <div class="card overdue">
+                <h2 id="overdueAssignments">0</h2>
+                <p>Overdue</p>
+            </div>
+
+            <div class="card completed">
+                <h2 id="completedAssignments">0</h2>
+                <p>Completed</p>
+            </div>
+
+        </section>
+
+        <section class="assignment-form">
+
+            <h2>Add Assignment</h2>
+
+            <form id="assignmentForm">
+
+                <input type="text" id="title" placeholder="Assignment Title" required>
+
+                <input type="text" id="module" placeholder="Module Name" required>
+
+                <input type="date" id="dueDate" required>
+
+                <select id="priority">
+                    <option value="High">High Priority</option>
+                    <option value="Medium">Medium Priority</option>
+                    <option value="Low">Low Priority</option>
+                </select>
+
+                <textarea id="description" placeholder="Assignment Description"></textarea>
+
+                <button type="submit">Add Assignment</button>
+
+            </form>
+
+        </section>
+
+        <section class="search-filter">
+
+            <input type="text" id="searchInput" placeholder="Search assignments...">
+
+            <select id="filterPriority">
+                <option value="All">All Priorities</option>
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+            </select>
+            <button id="searchBtn"> Search </button>
+
+        </section>
+
+        <section class="assignment-list">
+
+            <h2>Your Assignments</h2>
+
+            <div id="assignmentsContainer"></div>
+
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

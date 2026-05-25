@@ -1,0 +1,474 @@
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+
+body {
+    font-family: Arial, sans-serif;
+    background: #F8FAFC;
+    color: #1E293B;
+}
+
+/* LOGIN PAGE */
+
+
+.login-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #927118, #1E293B);
+}
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.login-card {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.login-card h1 {
+    margin-bottom: 15px;
+    color: #2563EB;
+}
+
+.login-card p {
+    margin-bottom: 25px;
+    color: #555;
+}
+
+.login-card input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.login-card button {
+    width: 100%;
+    padding: 14px;
+    background: #2563EB;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-card button:hover {
+    background: #1D4ED8;
+}
+
+/* NAVBAR */
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
+
+ul li {
+  float: center;
+}
+
+ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  background-color: #413e3e;
+}
+
+nav {
+    background: #7d8592;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #F59E0B;
+}
+
+/* MAIN */
+
+main {
+    padding: 40px;
+}
+
+/* HERO */
+
+.hero {
+    margin-bottom: 30px;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+/* STATS */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.card h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.upcoming {
+    border-left: 15px solid #F59E0B;
+}
+
+.overdue {
+    border-left: 15px solid #DC2626;
+}
+
+.completed {
+    border-left: 15px solid #16A34A;
+}
+
+/* FORM */
+
+.assignment-form {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.assignment-form h2 {
+    margin-bottom: 20px;
+}
+
+.assignment-form form {
+    display: grid;
+    gap: 15px;
+}
+
+.assignment-form input,
+.assignment-form select,
+.assignment-form textarea {
+    padding: 14px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.assignment-form button {
+    padding: 14px;
+    background: #2563EB;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.assignment-form button:hover {
+    background: #1D4ED8;
+}
+
+/* SEARCH */
+
+.search-filter {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.search-filter input,
+.search-filter select {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+/* ASSIGNMENTS */
+
+.assignment-list h2 {
+    margin-bottom: 20px;
+}
+
+.assignment-item {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.assignment-item h3 {
+    margin-bottom: 10px;
+}
+
+.assignment-item p {
+    margin-bottom: 8px;
+}
+
+.assignment-actions {
+    margin-top: 15px;
+}
+
+.assignment-actions button {
+    padding: 10px 14px;
+    border: none;
+    border-radius: 8px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.complete-btn {
+    background: #16A34A;
+    color: white;
+}
+
+.delete-btn {
+    background: #DC2626;
+    color: white;
+}
+
+/* GROUPS */
+
+.group-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .search-filter {
+        flex-direction: column;
+    }
+
+    main {
+        padding: 20px;
+    }
+}
+
+.calendar {
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+.search-filter button {
+
+    padding: 12px 20px;
+
+    background: linear-gradient(135deg, #2563EB, #3B82F6);
+
+    color: white;
+
+    border: none;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.search-filter button:hover {
+
+    transform: translateY(-2px);
+
+    opacity: 0.9;
+}
+
+/* CALENDAR */
+
+.calendar-container {
+
+    padding: 50px;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+.calendar-header {
+
+    margin-bottom: 30px;
+}
+
+.calendar-header h1 {
+
+    font-size: 2.5rem;
+
+    color: #1E293B;
+}
+
+/* DAYS */
+
+.calendar-days {
+
+    display: grid;
+
+    grid-template-columns: repeat(7, 1fr);
+
+    text-align: center;
+
+    font-weight: 600;
+
+    margin-bottom: 15px;
+
+    color: #64748B;
+}
+
+/* GRID */
+
+.calendar-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(7, 1fr);
+
+    gap: 15px;
+}
+
+/* DAY BOX */
+
+.calendar-day {
+
+    min-height: 140px;
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 12px;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+
+    position: relative;
+}
+
+.calendar-day-number {
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+/* ASSIGNMENT BADGES */
+
+.calendar-assignment {
+
+    background: #2563EB;
+
+    color: white;
+
+    padding: 8px;
+
+    border-radius: 10px;
+
+    font-size: 0.8rem;
+
+    margin-top: 8px;
+
+    overflow: hidden;
+}
+
+.calendar-assignment.overdue {
+
+    background: #DC2626;
+}
+
+.calendar-assignment.completed {
+
+    background: #16A34A;
+}
+
+/* EMPTY CELLS */
+
+.empty {
+
+    background: transparent;
+
+    box-shadow: none;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 900px) {
+
+    .calendar-grid {
+
+        gap: 8px;
+    }
+
+    .calendar-day {
+
+        min-height: 100px;
+
+        font-size: 0.8rem;
+    }
+}
