@@ -66,6 +66,10 @@ if (assignmentForm) {
         updateStats();
 
         alert("Assignment added successfully!");
+        showToast(
+    "Assignment added successfully!",
+    "success"
+);
     });
 }
 
@@ -178,6 +182,10 @@ function completeAssignment(id) {
     renderCompletedAssignments();
 
     updateStats();
+    showToast(
+    "Assignment marked as completed!",
+    "success"
+);
 }
 
 // DELETE ASSIGNMENT
@@ -330,3 +338,89 @@ if (filterPriority) {
 
 searchBtn.innerText = "Searching...";
 
+// POPUP TOAST NOTIFICATIONS
+
+function showToast(message, type = "info") {
+
+    const toastContainer =
+        document.getElementById("toastContainer");
+
+    if (!toastContainer) return;
+
+    // CREATE TOAST
+
+    const toast =
+        document.createElement("div");
+
+    toast.classList.add("toast", type);
+
+    toast.innerHTML = `
+
+        <span>${message}</span>
+
+        <button onclick="this.parentElement.remove()">
+
+            ✕
+
+        </button>
+
+    `;
+
+    // ADD TO PAGE
+
+    toastContainer.appendChild(toast);
+
+    // AUTO REMOVE
+
+    setTimeout(() => {
+
+        toast.remove();
+
+    }, 4000);
+}
+
+function checkDeadlines() {
+
+    const today = new Date();
+
+    assignments.forEach(assignment => {
+
+        if (!assignment.completed) {
+
+            const dueDate =
+                new Date(assignment.dueDate);
+
+            const difference =
+                Math.ceil(
+                    (dueDate - today) /
+                    (1000 * 60 * 60 * 24)
+                );
+
+            // DUE SOON
+
+            if (difference <= 2 && difference >= 0) {
+
+                showToast(
+
+                    `${assignment.title} is due in ${difference} day(s)!`,
+
+                    "warning"
+                );
+            }
+
+            // OVERDUE
+
+            if (difference < 0) {
+
+                showToast(
+
+                    `${assignment.title} is overdue!`,
+
+                    "error"
+                );
+            }
+        }
+    });
+}
+
+checkDeadlines();
